@@ -1,12 +1,9 @@
 
-
-
-<!--
 <h1>New Event</h1>
 
 <%= link_to 'Show All Events', events_path%>
 
-<%= form_for @event do |f|%>
+<%= form_for event do |f|%>
 
 <p>
   <%= f.label :name %>
@@ -30,10 +27,4 @@
 
 <p>
   <%= f.submit %>
-</p> -->
-
-<h1>New Event</h1>
-
-<%= link_to 'Show all Events', events_path %>
-
-<%= render 'event_form', event: @event %>
+</p>
