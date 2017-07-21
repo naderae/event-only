@@ -1,5 +1,10 @@
 
 
+<h1>Events</h1>
+
+<%= link_to("Create a New Event", new_event_path(@event))%>
+
+
 <% @events.each do |event| %>
   <%= render 'single_event', event: event %>
 <% end %>
