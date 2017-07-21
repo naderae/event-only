@@ -1,1 +1,30 @@
-example@form page
+<%= form_tag("/job_applications", method: "post") do %>
+  <p>
+    <%= label_tag(:full_name, "Full Name")%> <!-- the argument is the field you want it in,  -->
+    <%= text_field(:job_applications, :full_name) %> <!-- the argument is the  full name field in the job_applications params hash-->
+  </p>
+
+  <p>
+    <%= label_tag(:phone, "Phone Number") %>
+    <%= telephone_field(:job_applications, :phone) %> <!-- phone field in the job_applications -->
+  </p>
+
+   <p>
+     <%= label_tag(:hobby, "Hobby") %>
+     <%= text_field(:job_applications, :hobby) %>
+  </p>
+
+  <p>
+    <%= label_tag(:years_experience, "Years of Experience") %>
+    <%= number_field(:job_applications, :years_experience) %>
+  </p>
+
+  <p>
+    <%= label_tag(:available_date, "Available From") %>
+    <%= datetime_local_field(:job_applications, :available_date) %>
+  </p>
+
+  <p>
+    <%= submit_tag("Submit") %>
+  </p>
+<% end %>

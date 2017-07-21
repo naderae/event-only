@@ -1,14 +1,14 @@
-<!-- <h1>New Location</h1>
+<h1>New Location</h1>
 
 <%= link_to 'Show all locations', locations_path %>
 
-<%= form_for @location do |f| %>
+<%= form_for location do |f| %>
   <p>
     <%= f.label :name %>  <!-- the label is the same title as title of the params hash -->
-    <!-- <%= f.text_field :name %> <!-- says your storing  this text field in the :name column in the params hash-->
-  <!-- </p>  -->
+    <%= f.text_field :name %> <!-- says your storing  this text field in the :name column in the params hash-->
+  </p>
 
-  <!-- <p>
+  <p>
     <%= f.label :city %>
     <%= f.text_field :city %>
   </p>
@@ -27,10 +27,4 @@
     <%= f.submit %>
   </p>
 
-<% end %> --> -->
-
-<h1>New Location</h1>
-
-<%= link_to 'Show all locations', locations_path %>
-
-<%= render 'location_form', location: @location %>
+<% end %>
